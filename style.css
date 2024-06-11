@@ -1,0 +1,1208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --color1: black;
+    --color2: white;
+    --color3: crimson;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: black;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    cursor: default;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.container .landing-page {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.884);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: landingSlideUp 2s ease-in-out forwards 2s;
+    z-index: 100;
+}
+
+@keyframes landingSlideUp {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+.container .landing-page h1.heading {
+    font-size: 10rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: var(--color3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: headingBlink 2s ease-in-out forwards;
+}
+
+@keyframes headingBlink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.container .header {
+    height: 15vh;
+    width: 100vw;
+    background: transparent;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    z-index: 2;
+}
+
+.container .header ul {
+    list-style-type: none;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container .header ul li a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.714);
+    font-style: italic;
+    letter-spacing: .5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.container .header ul li a:hover {
+    color: var(--color3);
+}
+
+.container .header .icons {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+    align-items: center;
+}
+
+.container .header .icons i {
+    font-size: 2rem;
+    color: var(--color2);
+    background: rgba(255, 255, 255, 0.133);
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.container .header .icons i:hover {
+    color: var(--color3);
+    background: var(--color2);
+}
+
+.container .header a.login {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.container .header a.login h1 {
+    font-size: 1.6rem;
+    padding: 2rem 4rem 2rem 6rem;
+    color: var(--color2);
+    background: var(--color3);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.container .header a.login h1:hover {
+    color: var(--color3);
+    background: var(--color2);
+}
+
+.container .header .mobile-menu {
+    display: none;
+}
+.container .header .mobile-menu-box {
+    display: none;
+}
+
+.container .hero {
+    height: 100vh;
+    width: 100vw;
+    background: url(images/BG4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .hero::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.589);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+}
+
+.container .hero .g-name {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 4rem;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    z-index: 10;
+}
+
+.container .hero .g-genre {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2rem;
+    position: absolute;
+    top: 67%;
+    left: 5%;
+    z-index: 10;
+}
+
+.container .hero .g-rating {
+    color: var(--color3);
+    font-size: 2rem;
+    position: absolute;
+    top: 72%;
+    left: 5%;
+    z-index: 10;
+}
+
+.container .hero .g-price {
+    color: var(--color3);
+    font-size: 5rem;
+    position: absolute;
+    top: 76%;
+    left: 5%;
+    z-index: 10;
+}
+
+.container .hero .g-btn {
+    color: var(--color2);
+    background:var(--color1);
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    border: 2px solid transparent;
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+}
+
+.container .hero .g-btn:hover {
+    color: var(--color3);
+    background-color: transparent;
+    border: 2px solid var(--color3);
+}
+
+.container .hero .hero-games {
+    height: 200px;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 150%;
+    right: 5%;
+    z-index: 10;
+    animation: heroGamesRise 2s ease-in-out forwards 2.5s;
+}
+
+@keyframes heroGamesRise {
+    0% {
+        top: 150%;
+    }
+    100% {
+        top: 70%;
+    }
+}
+
+.container .hero .hero-games img {
+    height: 150px;
+    width: 140px;
+    padding: 1rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    transition: all 0s ease-in-out;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+}
+
+.container .hero .hero-games img:hover {
+    opacity: 1;
+    scale: 1.2;
+}
+
+section.ktc {
+    height: 100vh;
+    width: 100vw;
+    background: url(images/agent.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+section.ktc::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+section.ktc .left {
+    height: 100%;
+    width: 30%;
+    z-index: 2;
+    position: relative;
+    overflow-x: scroll;
+}
+
+section.ktc .left .down-icons {
+    height: 100px;
+    width: 100px;
+    position: sticky;
+    top: 80%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    z-index: 4;
+    animation: scrollDownSign 1s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes scrollDownSign {
+    0% {
+        top: 80%;
+    }
+    100% {
+        top: 85%;
+    }   
+}
+
+section.ktc .left .down-icons i.i-one {
+    color: var(--color2);
+    font-size: 2rem;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+section.ktc .left .down-icons i.i-two {
+    color: var(--color2);
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+section.ktc .left .down-icons i.i-three {
+    color: var(--color2);
+    font-size: 4rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);            
+}
+
+section.ktc .left .inner {
+    height: 2000px;
+    width: 100%;
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+section.ktc .left .inner .tab {
+    height: 10%;
+    width: 80%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    position: relative;
+}
+
+section.ktc .left .inner .tab:hover {
+    background-size: 130%;
+}
+
+section.ktc .left .inner .tab::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+section.ktc .left .inner .tab:hover::after {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+section.ktc .left .inner .tab1 {
+    background: url(images/agent.jpg);
+    background-size: 150%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab2 {
+    background: url(images/arthur.jpg);
+    background-size: 150%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab3 {
+    background: url(images/ezio.jpg);
+    background-size: 150%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab4 {
+    background: url(images/geralt.jpg);
+    background-size: 150%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab5 {
+    background: url(images/jin.jpg);
+    background-size: 150%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab6 {
+    background: url(images/kratos.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab7 {
+    background: url(images/lara.png);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab8 {
+    background: url(images/master.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section.ktc .left .inner .tab9 {
+    background: url(images/price.jpg);
+    background-size: 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.ktc .left .inner .tab h1 {
+    width: 60%;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+section.ktc .right {
+    height: 100%;
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 2;
+}
+
+section.ktc .right::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent, black);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    pointer-events: none;
+}
+
+section.ktc .right .top {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+section.ktc .right .top::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+}
+
+section.ktc .right .top img {
+    height: 135%;
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+
+section.ktc .right .bottom {
+    height: 30%;
+    width: 50%;
+    display: flex;
+    position: absolute;
+    top: 40%;
+    z-index: 4;
+}
+
+section.ktc .right .bottom .b-center {
+    height: 100%;
+    width: 80%;
+    color: var(--color1);
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+section.ktc .right .bottom .b-center h1, p, a.b-center-btn {
+    text-align: left;
+    color: var(--color2);
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+section.ktc .right .bottom .b-center h1 {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    color: var(--color2);
+}
+
+section.ktc .right .bottom .b-center p {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 2rem;
+    letter-spacing: 1px;
+    background: #080b1e;
+}
+
+section.ktc .right .bottom .b-center a.b-center-btn {
+    width: 40%;
+    color: var(--color2);
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+    border: 2px solid var(--color2);
+}
+
+section#categories {
+    height: 100vh;
+    width: 100vw;
+    background: url(images/BG5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+section#categories::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+section#categories .cat-top {
+    height: 20vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+section#categories .cat-top .inner {
+    height: 100%;
+    width: 100%;
+}
+
+section#categories .cat-top .inner ul {
+    list-style: none;
+    height: 100%;
+    width: 80%;
+    margin: 0 0 0 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section#categories .cat-top .inner ul li {
+    width: 10%;
+    background: var(--color2);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section#categories .cat-top .inner ul li a {
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    color: var(--color2);
+    background: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+section#categories .cat-top .inner ul li a:hover {
+    background: var(--color2);
+    color: var(--color1);
+}
+
+section#categories .cat-top .inner ul li a.active {
+    background: var(--color2);
+    color: var(--color1);
+}
+
+section#categories .cat-middle {
+    height: 70vh;
+    width: 100vw;
+    z-index: 2;
+    overflow-y: scroll;
+}
+
+section#categories .cat-middle .cards-col {
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#categories .cat-middle .cards-col .card {
+    height: 250px;
+    width: 180px;
+    border-radius: 5px;
+    margin: 2rem;
+    position: relative;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+section#categories .cat-middle .cards-col .card:hover {
+    scale: 1.1;
+}
+
+section#categories .cat-middle .cards-col .card::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.367);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: 0.3s;
+}
+
+section#categories .cat-middle .cards-col .card:hover::after {
+    background: transparent;
+}
+
+section#categories .cat-middle .cards-col .card.hide {
+    display: none;
+}
+
+/* Card Backgrounds */
+section#categories .cat-middle .cards-col .card1 {
+    background: url(images/categories/game1.webp);
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card2 {
+    background: url(images/categories/game2.avif);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card3 {
+    background: url(images/categories/game3.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card4 {
+    background: url(images/categories/game4.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card5 {
+    background: url(images/categories/game5.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card6 {
+    background: url(images/categories/game6.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card7 {
+    background: url(images/categories/game7.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card8 {
+    background: url(images/categories/game8.jpg);
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card9 {
+    background: url(images/categories/game9.jpg);
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card10 {
+    background: url(images/categories/game10.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card11 {
+    background: url(images/categories/game11.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card12 {
+    background: url(images/categories/game12.webp);
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card13 {
+    background: url(images/categories/game13.jpg);
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card14 {
+    background: url(images/categories/game14.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card15 {
+    background: url(images/categories/game15.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card16 {
+    background: url(images/categories/game16.jpg);
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card17 {
+    background: url(images/categories/game17.png);
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card18 {
+    background: url(images/categories/game18.webp);
+    background-size: 120%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card19 {
+    background: url(images/categories/game19.png);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card20 {
+    background: url(images/categories/game20.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card21 {
+    background: url(images/categories/game21.png);
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card22 {
+    background: url(images/categories/game22.webp);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card23 {
+    background: url(images/categories/game23.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card24 {
+    background: url(images/categories/game24.webp);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card25 {
+    background: url(images/categories/game25.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card26 {
+    background: url(images/categories/game26.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card27 {
+    background: url(images/categories/game27.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card28 {
+    background: url(images/categories/game28.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card29 {
+    background: url(images/categories/game29.jpeg);
+    background-size: 115%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card30 {
+    background: url(images/categories/game30.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card31 {
+    background: url(images/categories/game31.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card32 {
+    background: url(images/categories/game32.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card33 {
+    background: url(images/categories/game33.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card34 {
+    background: url(images/categories/game34.webp);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card35 {
+    background: url(images/categories/game35.webp);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card36 {
+    background: url(images/categories/game36.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card37 {
+    background: url(images/categories/game37.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card38 {
+    background: url(images/categories/game38.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card39 {
+    background: url(images/categories/game39.avif);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card40 {
+    background: url(images/categories/game40.png);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card41 {
+    background: url(images/categories/game41.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section#categories .cat-middle .cards-col .card42 {
+    background: url(images/categories/game42.jpg);
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section#categories .cat-bottom {
+    height: 10vh;
+    width: 100vw;
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+section#categories .cat-bottom a {
+    font-size: 1.6rem;
+    font-style: italic;
+    background: transparent;
+    color: var(--color3);
+    margin: 0 5rem 0 0;
+    padding: 1rem 3rem;
+    transition: 0.3s;
+}
+
+section#categories .cat-bottom a:hover {
+    color: var(--color2);
+}
+
+
+section#contact {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+}
+
+section#contact .c-top {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contact .c-top button {
+    width: 200px;
+    margin: 2rem;
+    padding: 1rem;
+    color: var(--color2);
+    background: var(--color3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section#contact .c-bottom {
+    height: 85%;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+section#contact .c-bottom .box {
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+section#contact .c-bottom .box .box-left {
+    height: 100%;
+    width: 70%;
+}
+
+section#contact .c-bottom .box .box-right {
+    height: 100%;
+    width: 30%;
+}
+
+section#contact .c-bottom .contact-box {
+    z-index: 2;
+}
+
+section#contact .c-bottom .contact-box .box-left {
+    background: rgb(14, 14, 14);
+}
+
+section#contact form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#contact form input {
+    width: 50%;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color2);
+    color: var(--color2);
+}
+
+section#contact form input:focus {
+    outline: none;
+}
+
+section#contact form input::placeholder {
+    font-weight: 600;
+    font-style: italic;
+}
+
+section#contact form textarea {
+    width: 50%;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color2);
+    color: var(--color2);
+    resize: none;
+}
+
+section#contact form textarea:focus {
+    outline: none;
+}
+
+section#contact form textarea::placeholder {
+    font-weight: 600;
+    font-style: italic;
+}
+
+section#contact form .buttons {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+}
+
+section#contact form button {
+    width: 150px;
+    border: none;
+    padding: 1rem 3rem;
+    background: var(--color3);
+    color: var(--color2);
+}
+
+section#contact .c-bottom .contact-box .box-right {
+    background: url(images/contact2.jpg);
+    background-position: -470px 0px;
+    background-repeat: no-repeat;
+    background-size: 400%;
+}
+
+section#contact .c-bottom .god-box { 
+    flex-direction: row-reverse;
+    z-index: 1;
+}
+
+section#contact .c-bottom .god-box .box-left {
+    background: rgb(7, 7, 7);
+}
+
+section#contact .c-bottom .god-box .box-right {
+    background: url(images/contact.jpg);
+    background-position: -750px -70px;
+    background-repeat: no-repeat;
+    background-size: 480%;
+}
+
+footer {
+    height: 20vh;
+    width: 100vw;
+    background: rgb(7, 7, 7);
+    position: relative;
+}
+
+footer h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--color3);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    font-style: italic;
+    color: rgb(163, 163, 163);
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+}
+
+footer .socials {
+    height: 50%;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .socials a {
+    width: 10%;
+    height: 60%;
+}
+
+footer .socials i {
+    width: 100%;
+    height: 100%;
+    color: var(--color3);
+    border-radius: 0px;
+    font-size: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+footer .socials i:hover {
+    scale: 1.2;
+    background: var(--color3);
+    color: var(--color2);
+}
